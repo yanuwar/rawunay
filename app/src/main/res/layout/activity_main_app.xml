@@ -1,18 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
     tools:context=".controller.MainApp">
 
-    <TextView
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Tictactoe"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="RESET"
+                android:textSize="16sp"
+                android:gravity="end|center_vertical"
+                android:background="#00ffffff"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:columnCount="3" >
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+        <Button
+            android:id="@+id/btn_2"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+        <Button
+            android:id="@+id/btn_3"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+
+        <Button
+            android:id="@+id/btn_4"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+        <Button
+            android:id="@+id/btn_5"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+        <Button
+            android:id="@+id/btn_6"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+        <Button
+            android:id="@+id/btn_7"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+        <Button
+            android:id="@+id/btn_8"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+        <Button
+            android:id="@+id/btn_9"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="X"
+        android:layout_marginTop="20dp"
+        android:textSize="40sp"/>
+
+    <TextView
+        android:id="@+id/tv_winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Winner"
+        android:layout_marginTop="8dp"
+        android:textSize="30sp"/>
+
+</LinearLayout>
