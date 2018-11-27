@@ -13,34 +13,19 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        app:contentInsetStart="0dp"
+        app:contentInsetStart="16dp"
+        app:titleTextColor="@android:color/white"
+        app:title="Tictactoe"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="12dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="Tictactoe"
-                android:textSize="24sp"
-                android:textColor="@android:color/white"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="RESET"
-                android:textSize="16sp"
-                android:gravity="end|center_vertical"
-                android:background="#00ffffff"
-                android:textColor="@android:color/white" />
-        </LinearLayout>
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESET"
+            android:textSize="16sp"
+            android:layout_gravity="end|center"
+            android:background="#00ffffff"
+            android:layout_marginEnd="16dp"
+            android:textColor="@android:color/white" />
     </android.support.v7.widget.Toolbar>
 
     <GridLayout
